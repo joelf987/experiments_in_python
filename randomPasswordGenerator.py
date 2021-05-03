@@ -1,5 +1,8 @@
 import random
 
+'''
+Shuffles the input string, leaving the first character in place.
+'''
 def shuffle(answer):
     l = list(answer[1:])
     random.shuffle(l)
