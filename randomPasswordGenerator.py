@@ -1,10 +1,9 @@
 import random
-import string
 
 def shuffle(answer):
-    l = list(answer)
+    l = list(answer[1:])
     random.shuffle(l)
-    return ''.join(l)
+    return answer[:1] + "".join(l)
 
 def yes_or_no(question):
     reply = list(str(input(question+' (y/n): ')).lower().strip()).pop(0)
@@ -24,9 +23,9 @@ def main():
     reply = yes_or_no("Do you want to include special characters?")
     print("Including special characters: ", reply)
     include_special_characters = reply
-    letters = string.ascii_letters
-    numbers = string.digits
-    specials = string.punctuation
+    letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    numbers = "0123456789"
+    specials = "@'#~[]{}-_,./<>?!£$%^*:;"
 
     if include_numbers & include_special_characters:
         component_length = length // 3
