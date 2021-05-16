@@ -13,6 +13,7 @@ def bsearch(inputList, number_to_search, start_index = 0, end_index = len(inputL
     else:
         return bsearch(inputList, number_to_search, midpoint + 1, end_index)
 
+
 number_to_search_for = int(input("What number are you looking for? "))
 
 index = bsearch(inputList, number_to_search_for)
