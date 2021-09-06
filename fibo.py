@@ -44,24 +44,24 @@ class Fibo:
 
 def main():
     a = int(input("How many fibonacci numbers? "))
-    start = time.time()
+    start = time.time()*1000
     result = Fibo().generate_with_list(a);
-    end = time.time()
+    end = time.time()*1000
     print("Time to build a list: %.7f" % (end - start))
     print( "First ", a, " Fibonacci numbers:")
     print("Collected in a list:")
     for x in result:
         print(x)
-    start = time.time()
+    start = time.time()*1000
     print("Recursive:")
     Fibo().generate_recursive(1, 1, 0, a)
-    end = time.time()
+    end = time.time()*1000
     print("Time to build by recursion: %.7f" % (end - start))
-    start = time.time()
+    start = time.time()*1000
     print("Python Generator:")
     for x in Fibo().generate(a):
         print(x)
-    end = time.time()
+    end = time.time()*1000
     print("Time to generate: %.7f" % (end - start))
 
 
