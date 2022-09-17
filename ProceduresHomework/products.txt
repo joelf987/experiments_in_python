@@ -1,0 +1,10 @@
+1234567 Apple   1.20
+1234568 Banana  0.05
+1234569 Grapes  2.00
+1234560 Apricot 3.45
+1234561 Peaches 3.45
+1234562 Watermelon  3.50
+1234563 Pineapple   3.50
+1234554 Strawberry  2.40
+1234565 Blueberry   0.80
+1234566 Raspberry   0.80
