@@ -1,13 +1,18 @@
 
+'''products dictionary(map)'''
 products = {}
+#open file for reading
 productData = open("products.txt")
+#for each line in products file
 for line in productData.readlines():
     row = line.split()
+    #mapping products by productcode in product map
     products[row[0]] = row
 
 print (products)
 
 userWanstToBuy = input("Would you like to buy some fruit? ").lower()
+# creating a map for the shopping list by product code
 userShoppingList = {}
 while userWanstToBuy.startswith("y"):
     productChoice = input("Product code and quantity? ").split()
