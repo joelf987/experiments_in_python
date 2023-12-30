@@ -22,11 +22,11 @@ def main():
     a = -1
     while a < 0:
         a = int(input("Enter a positive number: "))
-    # start = time.time()*1000
-    # result = Factorial().generate_recursive(a)
-    # print("Recursive factorial: ", result)
-    # end = time.time()*1000
-    # print("Time to build by recursion: %.7f" % (end - start))
+    start = time.time()*1000
+    result = Factorial().generate_recursive(a)
+    print("Recursive factorial: ", result)
+    end = time.time()*1000
+    print("Time to build by recursion: %.7f" % (end - start))
     start = time.time()*1000
     result = Factorial().generate_loop(a)
     print("Loop factorial: ", result)
