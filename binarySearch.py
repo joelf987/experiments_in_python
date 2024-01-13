@@ -1,20 +1,30 @@
 import time
 import random
 
-unordered = [random.randint(0,5000) for i in range(1000)]
+unordered = [65, 34, 28, 68, 52, 21]
+#[random.randint(0,5000) for i in range(1000)]
+step = 0
 
 def bubble_Sort(unordered):
+    step = 0;
     for x in range(1, len(unordered)):
         for y in range(0, len(unordered) - 1):
             if unordered[y] > unordered[y + 1]:
+                step += 1
+                print("Pass: ", step)
                 temp = unordered[y]
                 unordered[y] = unordered[y + 1]
                 unordered[y + 1] = temp
+                print("At step ",step, " we have: ", unordered)
 
     return unordered
 
 
 def merge(left_list, right_list):
+    global step
+    step += 1
+    print("Pass: ", step)
+    print ("Stat at step ", step, " is: ", left_list, right_list)
     resultList = []
     left_index = 0
     right_index = 0
@@ -49,6 +59,7 @@ def merge(left_list, right_list):
     return resultList
 
 def merge_sort(list_to_sort):
+
     if len(list_to_sort) == 1:
         return list_to_sort
     else:
@@ -81,15 +92,16 @@ def bsearch(ordered, number_to_search, start_index=0, end_index=len(unordered) -
 
 number_to_search_for = int(input("What number are you looking for? "))
 time.perf_counter()
-ordered = merge_sort(unordered)
+ordered = insertion_sort(unordered)
 print ("Time (merge-sort):", time.perf_counter())
 print ("sorted", ordered)
 time.perf_counter()
-bubble_ordered = bubble_Sort(unordered)
-print ("Time (bubble-sort):", time.perf_counter())
-print ("sorted", bubble_ordered)
+# bubble_ordered = bubble_Sort(unordered)
+#print ("Time (bubble-sort):", time.perf_counter())
+# print ("sorted", bubble_ordered)
 # index = bsearch(ordered, number_to_search_for)
 # if index == -1:
 #     print("Number ", number_to_search_for, " not found ")
 # else:
 #     print("Number ", number_to_search_for, " found ")
+
