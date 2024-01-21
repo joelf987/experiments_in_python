@@ -17,7 +17,7 @@ class Factorial:
             else:
                 result = result * x
 
-        return result;
+        return result
 def main():
     a = -1
     while a < 0:
