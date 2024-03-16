@@ -7,7 +7,7 @@ while highestNum < 15:
         print("You can choose a number between 1 and 3")
     else:
         for i in range(0, selection):
-            highestNum = highestNum + 1
+            highestNum += 1
             if highestNum == 15:
                 print(f"{player}'s number[{i + 1}]: {highestNum}")
                 break # player has reached 15!!!!
